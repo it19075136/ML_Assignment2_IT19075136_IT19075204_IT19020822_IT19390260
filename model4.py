@@ -40,3 +40,13 @@ print(Y)
 
 # splitting traning and testing data
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.3, random_state=2)
+
+
+# Model Traning 
+############## 1. Linear Regression ################
+
+# In[6]:
+
+
+# loading the linear regression model
+lin_reg_model = LinearRegression()
