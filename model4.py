@@ -65,3 +65,11 @@ lin_reg_model.fit(X_train, Y_train)
 
 # prediction on training data
 train_data_pred = lin_reg_model.predict(X_train)
+
+
+# In[9]:
+
+
+# R squre Error
+error_score = metrics.r2_score(Y_train, train_data_pred)
+print("R Squre Error : ", error_score)
