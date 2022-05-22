@@ -4,6 +4,7 @@
 # In[1]:
 
 # import required packages
+from sklearn.model_selection import train_test_split
 import data_prep
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -33,3 +34,9 @@ print(X)
 # print Y dataset
 print(Y)
 
+
+# In[5]:
+
+
+# splitting traning and testing data
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.3, random_state=2)
