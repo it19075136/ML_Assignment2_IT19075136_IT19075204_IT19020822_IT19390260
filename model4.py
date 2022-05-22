@@ -17,7 +17,7 @@ from sklearn import metrics
 
 
 # splitting the data and target
-X = data_prep.vehicle_dataset.drop(['Price'], axis=1)
+X = data_prep.vehicle_dataset.drop(['Price', 'Year', 'Condition', 'Body'], axis=1)
 Y = data_prep.vehicle_dataset['Price']
 
 

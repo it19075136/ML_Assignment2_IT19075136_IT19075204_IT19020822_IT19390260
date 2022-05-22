@@ -132,4 +132,3 @@ vehicle_dataset['Body'] = Numerics.fit_transform(vehicle_dataset['Body'])
 
 
 vehicle_dataset.head()
-# %%
