@@ -4,6 +4,7 @@
 # In[1]:
 
 # import required packages
+from numpy import matrix
 from sklearn.model_selection import train_test_split
 import data_prep
 import seaborn as sns
@@ -42,7 +43,7 @@ print(Y)
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.3, random_state=2)
 
 
-# Model Training 
+#### Model Training ####
 ############## 1. Linear Regression ################
 
 # In[6]:
@@ -58,7 +59,9 @@ lin_reg_model = LinearRegression()
 lin_reg_model.fit(X_train, Y_train)
 
 
+#### Model Evaluation ####
 # In[8]:
 
 
-# calculating R squre Error
+# prediction on training data
+train_data_pred = lin_reg_model.predict(X_train)
