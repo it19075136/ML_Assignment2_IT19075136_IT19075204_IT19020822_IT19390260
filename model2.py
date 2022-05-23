@@ -18,7 +18,12 @@ Y = data_prep.vehicle_dataset['Price']
 
 # In[3]
 
-# print x dataset
+# print X dataset
 print(X)
+
+# In[4]
+
+# print Y dataset
+print(Y)
 
 
