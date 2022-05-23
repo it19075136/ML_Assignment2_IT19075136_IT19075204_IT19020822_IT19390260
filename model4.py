@@ -84,3 +84,9 @@ plt.xlabel("Actual Selling Price")
 plt.ylabel("Predicted Price")
 plt.title("Actual Prices Vs Predicted Prices")
 plt.show()
+
+# In[11]:
+
+
+# prediction on test data
+test_data_pred = lin_reg_model.predict(X_test)
