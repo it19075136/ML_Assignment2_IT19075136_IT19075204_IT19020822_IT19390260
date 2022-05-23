@@ -66,3 +66,24 @@ plt.xlabel("Actual Price")
 plt.ylabel("Predicted price")
 plt.title(" Actual Prices vs Predicted Prices")
 plt.show()
+
+# In[11]
+
+# prediction on testing data
+test_data_prediction = linear_regression_model.predict(X_test)
+
+# In[12]
+
+# R squared Error
+error_score_test = metrics.r2_score(Y_test , test_data_prediction)
+print("R squared Error Test : ", error_score_test) 
+
+# In[13]
+
+# Visualize the actual prices and predicted prices
+
+plt.scatter(Y_test, test_data_prediction)
+plt.xlabel("Actual Price")
+plt.ylabel("Predicted price")
+plt.title(" Actual Prices vs Predicted Prices")
+plt.show()
