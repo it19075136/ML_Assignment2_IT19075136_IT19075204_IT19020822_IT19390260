@@ -70,7 +70,7 @@ train_data_pred = lin_reg_model.predict(X_train)
 # In[9]:
 
 
-# R squre Error
+# R squre Error train data
 error_score = metrics.r2_score(Y_train, train_data_pred)
 print("R Squre Error : ", error_score)
 
@@ -90,3 +90,21 @@ plt.show()
 
 # prediction on test data
 test_data_pred = lin_reg_model.predict(X_test)
+
+
+# In[12]:
+
+
+# R squre error for test data
+error_score = metrics.r2_score(Y_test, test_data_pred)
+print("R Squre Error : ", error_score)
+
+
+# In[13]:
+
+
+plt.scatter(Y_test, test_data_pred)
+plt.xlabel("Actual Selling Price")
+plt.ylabel("Predicted Price")
+plt.title("Actual Price Vs Predicted Prices")
+plt.show()
