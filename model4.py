@@ -73,3 +73,14 @@ train_data_pred = lin_reg_model.predict(X_train)
 # R squre Error
 error_score = metrics.r2_score(Y_train, train_data_pred)
 print("R Squre Error : ", error_score)
+
+
+# In[10]:
+
+
+#### Visualize the actual prices vs predicted prices ####
+plt.scatter(Y_train, train_data_pred)
+plt.xlabel("Actual Selling Price")
+plt.ylabel("Predicted Price")
+plt.title("Actual Prices Vs Predicted Prices")
+plt.show()
