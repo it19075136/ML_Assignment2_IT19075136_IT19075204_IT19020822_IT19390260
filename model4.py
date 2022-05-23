@@ -98,3 +98,13 @@ test_data_pred = lin_reg_model.predict(X_test)
 # R squre error for test data
 error_score = metrics.r2_score(Y_test, test_data_pred)
 print("R Squre Error : ", error_score)
+
+
+# In[13]:
+
+
+plt.scatter(Y_test, test_data_pred)
+plt.xlabel("Actual Selling Price")
+plt.ylabel("Predicted Price")
+plt.title("Actual Price Vs Predicted Prices")
+plt.show()
