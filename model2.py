@@ -26,4 +26,10 @@ print(X)
 # print Y dataset
 print(Y)
 
+# In[5]
 
+# splitting traininig and testing data
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.3, random_state=2)
+
+#### Model Training ####
+############## 1. Linear Regression ################
