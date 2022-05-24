@@ -1,6 +1,5 @@
 # In[1]:
 # import required packages
-from numpy import size
 from sklearn.model_selection import train_test_split
 import data_prep
 import seaborn as sns
@@ -49,6 +48,9 @@ plt.xlabel("Actual Price")
 plt.ylabel("Predicted Price")
 plt.show()
 # %%
+# fit() testing data to the linear regression model
+linear_reg_model.fit(X_test, Y_test)
+# %%
 # prediction on test data
 test_data_pre = linear_reg_model.predict(X_test)
 # %%
@@ -61,3 +63,39 @@ plt.scatter(Y_test,test_data_pre)
 plt.xlabel("Actual Price")
 plt.ylabel("Predicted Price")
 plt.show()
+# %%
+# loading the lasso regression model
+lasso_reg_model = Lasso()
+# %%
+# fit() training data to the lasso regression model
+lasso_reg_model.fit(X_train,Y_train)
+# %%
+# prediction on training data
+training_data_pre = lasso_reg_model.predict(X_train)
+# %%
+# R squre Error train data
+err_score = metrics.r2_score(Y_train,training_data_pre)
+print("R Squre Error : ", err_score)
+# %%
+#### Visualize the actual prices vs predicted prices ####
+plt.scatter(Y_train,training_data_pre)
+plt.xlabel("Actual Price")
+plt.ylabel("Predicted Price")
+plt.show()
+# %%
+# fit() testing data to the lasso regression model
+lasso_reg_model.fit(X_test,Y_test)
+# %%
+# prediction on test data
+test_data_pre = lasso_reg_model.predict(X_test)
+# %%
+# R squre error for test data
+err_score = metrics.r2_score(Y_test,test_data_pre)
+print("R Squre Error : ", err_score)
+# %%
+#### Visualize the actual prices vs predicted prices ####
+plt.scatter(Y_test,test_data_pre)
+plt.xlabel("Actual Price")
+plt.ylabel("Predicted Price")
+plt.show()
+# %%
