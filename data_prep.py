@@ -6,10 +6,7 @@
 
 # import required packages
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 from sklearn.preprocessing import LabelEncoder
-
 
 # In[3]:
 
@@ -56,7 +53,7 @@ print(vehicle_dataset.columns.tolist())
 # In[9]:
 
 
-# rearrange dataset with remove unnecessary coloums
+# rearrange dataset removing unnecessary coloums
 vehicle_dataset = vehicle_dataset[['Price', 'Brand', 'Year', 'Condition', 'Transmission', 'Body', 'Fuel', 'Capacity', 'Mileage']].copy()
 vehicle_dataset.head()
 
@@ -132,4 +129,3 @@ vehicle_dataset['Body'] = Numerics.fit_transform(vehicle_dataset['Body'])
 
 
 vehicle_dataset.head()
-# %%
