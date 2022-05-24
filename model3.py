@@ -14,3 +14,7 @@ data_prep.vehicle_dataset.head()
 # %%#spliting the data and target
 X = data_prep.vehicle_dataset.drop(['Price','Condition','Transmission','Mileage'],axis=1) 
 Y = data_prep.vehicle_dataset['Price']
+# %%
+## In[3]:
+# print X dataset
+print(X)
