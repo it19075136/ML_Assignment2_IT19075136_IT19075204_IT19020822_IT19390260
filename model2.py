@@ -87,3 +87,43 @@ plt.xlabel("Actual Price")
 plt.ylabel("Predicted price")
 plt.title(" Actual Prices vs Predicted Prices")
 plt.show()
+
+############## 2. Lasso Regression ################
+
+# In[14]
+
+# Using the lasso regression model
+
+lasso_regression_model = Lasso()
+
+# In[15]
+
+# fit() training data to the lasso regression model
+lasso_regression_model.fit(X_train, Y_train)
+
+### Model Evaluation ###
+
+# In[16]
+
+# R square Error
+error_score_lasso = metrics.r2_score(Y_train, training_data_prediction)
+print("R Square Error : ",error_score_lasso)
+
+# In[17]
+
+# fit() testing data to the lasso regression model
+lasso_regression_model.fit(X_test, Y_test)
+
+# In[18]
+
+# prediction on testing data lasso model
+testing_data_prediction = lasso_regression_model.predict(X_test)
+
+# In[19]
+
+# setting scatter plot
+plt.scatter(Y_test,testing_data_prediction)
+plt.xlabel("Actual Price")
+plt.ylabel("Predcited Price")
+plt.title("Actual Prices vs Predicted Prices")
+plt.show()
