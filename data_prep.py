@@ -15,7 +15,7 @@ from sklearn.preprocessing import LabelEncoder
 vehicle_dataset = pd.read_csv('./vehicle_data.csv')
 
 
-# In[4]:
+# In[4]: 
 
 
 # checking the rows of the dataframe
@@ -53,8 +53,9 @@ print(vehicle_dataset.columns.tolist())
 # In[9]:
 
 
-# rearrange dataset removing unnecessary coloums
+# rearrange dataset removing unnecessary coloums and rows
 vehicle_dataset = vehicle_dataset[['Price', 'Brand', 'Year', 'Condition', 'Transmission', 'Body', 'Fuel', 'Capacity', 'Mileage']].copy()
+vehicle_dataset.dropna(inplace = True)
 vehicle_dataset.head()
 
 
@@ -108,7 +109,7 @@ print(vehicle_dataset.Transmission.value_counts())
 print(vehicle_dataset.Fuel.value_counts())
 print(vehicle_dataset.Body.value_counts())
 
-# In[15]
+# In[15]:
 
 
 # encode methods def
