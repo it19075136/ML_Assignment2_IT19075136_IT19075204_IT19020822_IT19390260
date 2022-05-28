@@ -59,7 +59,8 @@ print("R squared Error : ", error_score)
 
 # In[10]
 
-# Visualize the actual prices and predicted prices
+# Visualize the actual price and predicted prices
+
 
 plt.scatter(Y_train, training_data_prediction)
 plt.xlabel("Actual Price")
