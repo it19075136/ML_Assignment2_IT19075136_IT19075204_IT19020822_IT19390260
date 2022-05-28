@@ -55,7 +55,7 @@ training_data_prediction = linear_regression_model.predict(X_train)
 
 # R squared Error
 error_score = metrics.r2_score(Y_train, training_data_prediction)
-print("R squared Error : ", error_score)
+print("R squared  Error : ", error_score)
 
 # In[10]
 
